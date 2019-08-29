@@ -1,0 +1,17 @@
+What happen when not using BGP EVPN between Leafs and Spines
+Hi all,
+So the question is simple as the title indicates :)
+I use OSPF between 4 Leafs and 2 Spines.
+Multicast trafic is well implemented (the spines will be acting as Anycast RP ..).
+Config of VxLAN (VNI, Int NVE, ...) done.
+Is it obligatory to use BGP EVPN to implement VxLAN ? What is the purpose of implementing it cause I see that OSPF carry well Multicast traffic between Leafs and Spines ?
+
+Thanks in advance. 
+
+xxx
+
+The multicast-based VXLAN is flood-and-learn mechanism with no control plane. Scalability is always an issue with flood & learn. Also running multicast in underlay may not work for everyone plus it cannot be used as a DCI solution.
+
+Detailed explaination by Yves Louis
+http://yves-louis.com/DCI/?p=648
+xxxxx
