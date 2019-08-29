@@ -16,4 +16,17 @@ Detailed explaination by Yves Louis
 http://yves-louis.com/DCI/?p=648
 xxxxx
 Cisco vs Arista for a core switch
-Wondering what peoples experiences are with going Arista over Cisco for a core switching infrastructure. We're almost exclusively a Cisco shop (route/switch/firewall/collab). I've been introducing alternate technologies very slowly and have decided to take a hard look at Arista for this next upgrade/migration/restructure. Main requirement is 10Gb port density for our main office and 40Gb for site interconnect to our DR facility. Right now I'm comparing between the 7050SX-64 (48x SFP+ and 4x QSFP+) and a C9500-40X-A (40x SFP+ and 2x QSFP+). Qty 2 for whichever is the winner.
+Wondering what peoples experiences are with going Arista over Cisco for a core switching infrastructure. 
+We're almost exclusively a Cisco shop (route/switch/firewall/collab). I've been introducing alternate technologies 
+very slowly and have decided to take a hard look at Arista for this next upgrade/migration/restructure. 
+Main requirement is 10Gb port density for our main office and 40Gb for site interconnect to our DR facility. 
+Right now I'm comparing between the 7050SX-64 (48x SFP+ and 4x QSFP+) and a C9500-40X-A (40x SFP+ and 2x QSFP+). 
+Qty 2 for whichever is the winner.
+xx
+6 months ago
+You should look at the 7060SX2-48YC6 (48×25G SFP28, 6×100G QSFP28) too. Arista's pricing is weird, 
+sometimes the newer models end up being cheaper.
+You can still use it for 10* and 40 instead of 25 and 100 (and even 1Gb) so you're not losing any functionality.
+I have to confess not much experience with Cisco, but I've got a datacentre full of Arista and I love it.
+* Note because how the ASICs are wired, blocks of 4 SFP28 ports have to run at the same speed, 
+so ports 1-4 have to be the same, 5-8, etc.
